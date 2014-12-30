@@ -23,6 +23,11 @@ module Namie
       fullname == other.fullname
     end
 
+    def aka
+      match = [first, middle, last].join.match(/['"](\w*)['"]/)
+      match && match[1]
+    end
+
     def fullname
       to_s
     end

@@ -21,6 +21,14 @@ describe Namie::Name do
     Namie::Name.new('George S. Patton').lastname.must_equal('Patton')
   end
 
+  it 'should calculate an alias' do
+    Namie::Name.new('Ian "Lenny" Kilmister').aka.must_equal('Lenny')
+  end
+
+  it 'should calculate an alias' do
+    Namie::Name.new('S. Dumont').aka.must_be_nil
+  end
+
   describe 'Simple name' do
     let(:nam) { Namie::Name.new('Jules Verne') } # Jules Gabriel Verne
 
