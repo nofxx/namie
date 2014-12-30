@@ -13,6 +13,14 @@ describe Namie::Name do
     Namie::Name.new('George S. Patton').must_be_instance_of(Namie::Name)
   end
 
+  it 'should respond to alias method firstname' do
+    Namie::Name.new('Isaac Asimov').first.must_equal('Isaac')
+  end
+
+  it 'should respond to alias method lastname' do
+    Namie::Name.new('George S. Patton').lastname.must_equal('Patton')
+  end
+
   describe 'Simple name' do
     let(:nam) { Namie::Name.new('Jules Verne') } # Jules Gabriel Verne
 

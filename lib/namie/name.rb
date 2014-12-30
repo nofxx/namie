@@ -6,14 +6,13 @@ module Namie
     def initialize(*args)
       @title, @first, *@middle, @last, @suffix = Namie::Parser.new(args).args
     end
+    alias_method :firstname, :first
+    alias_method :middlenames, :middle
+    alias_method :lastname, :last
 
     def middle
       return nil if @middle.reject(&:nil?).empty?
       @middle.join(' ')
-    end
-
-    def surname
-      "#{[title, last].join(' ')}, #{[first, middle, suffix].join(' ')}"
     end
 
     def valid?
@@ -26,6 +25,10 @@ module Namie
 
     def fullname
       to_s
+    end
+
+    def shortname
+      to_s(:short)
     end
 
     def to_s(fmt = nil)
