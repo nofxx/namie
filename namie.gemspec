@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.authors     = ['Marcos Piccinini']
   s.email       = ['nofxx@github.com']
   s.homepage    = 'http://github.com/nofxx/namie'
-  s.summary     = 'Area codes for phonie'
-  s.description = 'Area codes for phonie'
+  s.summary     = 'Names as first class citizens'
+  s.description = 'Names as first class citizens'
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
