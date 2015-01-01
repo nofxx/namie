@@ -1,7 +1,7 @@
 module Namie
   # Name parser
   class Parser
-    TITLES = /^(Mister|Mr\.?|Sr\.?|Sir|Senhor|Dr\.?|Doutor|Sra\.?|Senhora)\b/i
+    TITLES = /^(Mister|Mr\.?|Ms\.?|Sir|Senhor|Dr\.?|Do[uc]tor|Sra?\.?|Senhora)\b/i
     JURIDIC = /\b(Ltd\.?|LTDA|Gmbh|LLC|S\/A)$/i
     SUFFIXES = /\b(#{JURIDIC}|Junior|Jr\.?|Neto|II|III)$/i
     attr_accessor :title, :first, :middle, :last, :suffix, :txt
