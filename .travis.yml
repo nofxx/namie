@@ -1,0 +1,12 @@
+language: ruby
+env: CI="travis"
+rvm:
+  - 1.9.3
+  - 2.0
+  - 2.1
+  - 2.2
+  - rbx-2
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: rbx-2
