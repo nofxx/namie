@@ -1,6 +1,7 @@
 # Namie
 [![Gem Version](https://badge.fury.io/rb/namie.png)](http://badge.fury.io/rb/namie)
 [![Coverage Status](https://coveralls.io/repos/nofxx/namie/badge.png?branch=master)](https://coveralls.io/r/nofxx/namie?branch=master)
+[![Dependency Status](https://gemnasium.com/nofxx/namie.svg)](https://gemnasium.com/nofxx/namie)
 [![Code Climate](https://codeclimate.com/github/nofxx/namie.png)](https://codeclimate.com/github/nofxx/namie)
 [![Build Status](https://travis-ci.org/nofxx/namie.png?branch=master)](https://travis-ci.org/nofxx/namie)
 
