@@ -69,6 +69,26 @@ describe Namie::Name do
     it { nam.suffix.must_be_nil }
   end
 
+  describe 'Name junior name' do
+    let(:nam) { Namie::Name.new('Mozart Brum Junior') } # rubocop:disable Metrics/LineLength
+
+    it { nam.title.must_be_nil }
+    it { nam.first.must_equal('Mozart') }
+    it { nam.middle.must_be_nil }
+    it { nam.last.must_equal('Brum') }
+    it { nam.suffix.must_equal('Junior') }
+  end
+
+  describe 'Name junior name with accent' do
+    let(:nam) { Namie::Name.new('Mozart Brum Júnior') } # rubocop:disable Metrics/LineLength
+
+    it { nam.title.must_be_nil }
+    it { nam.first.must_equal('Mozart') }
+    it { nam.middle.must_be_nil }
+    it { nam.last.must_equal('Brum') }
+    it { nam.suffix.must_equal('Júnior') }
+  end
+
   describe 'Name with lots of middle names' do
     let(:nam) { Namie::Name.new('Isabel Cristina Leopoldina Augusta Micaela Gabriela Rafaela Gonzaga de Bragança e Bourbon') } # rubocop:disable Metrics/LineLength
 
@@ -78,7 +98,6 @@ describe Namie::Name do
     it { nam.last.must_equal('Bourbon') }
     it { nam.suffix.must_be_nil }
   end
-
   describe 'Name with title' do
     let(:nam) { Namie::Name.new('Sir Arthur C. Clark') }
 
